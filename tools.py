@@ -156,6 +156,7 @@ def get_local_db() -> list[tuple]:
     Возращает таблицу заказов из БД, находящейся на машине.
     Данные подключения к БД берутся из config.py
     Формат таблицы - [(id, order_number, dollar_price, 'delivery_time', ruble_price),...]
+    
     """
     cursor = get_db_cursor(DEFAULT_DB_NAME, USER, PASSWORD, HOST)
     cursor.execute("SELECT * FROM orders ORDER BY id;")
