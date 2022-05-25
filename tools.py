@@ -25,7 +25,7 @@ def convert_order_from_gs_list_to_tuple(order: list) -> Optional[tuple]:
     """
     Преобразует order из формата ['id', 'order_number', 'dollar_price', 'delivery_time']
                         в формат (id, order_number, dollar_price, 'delivery_time', ruble_price).
-    delivery_time преобразуетсяиз формата 'дд.мм.гггг' в формат 'гггг-мм-дд',
+    delivery_time преобразуется из формата 'дд.мм.гггг' в формат 'гггг-мм-дд',
     добавляется новое поле ruble_price.
     В случае, если данные некорректные, ничего не возращает, сообщение об ошибке записывается в лог
 
