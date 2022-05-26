@@ -7,13 +7,13 @@
 
 """
 import os
+import xml.etree.ElementTree as Et
 from datetime import datetime, timedelta
 from typing import Optional
 
 import httplib2
 import psycopg2
 import requests
-import xml.etree.ElementTree as Et
 from googleapiclient.discovery import build
 from oauth2client.service_account import ServiceAccountCredentials
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT

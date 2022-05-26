@@ -1,0 +1,47 @@
+header {
+    height: 100px;
+    background-color: rgb(145, 221, 94);
+}
+
+.logo{
+    height: 100px;
+}
+
+.graph{
+    position: absolute;
+    left: 0;
+    top: 100;
+    width: 50%;
+}
+
+.table{
+    position: absolute;
+    right: 0;
+    top: 100;
+    width: 50%;
+}
+
+.table_body {
+    border: 1px solid;
+    height: 340px;
+	overflow-x: auto;
+}
+
+.table_body td{
+    border: 1px solid;
+}
+
+.table_head, .table_head td {
+    text-align: center;
+    border: 1px solid;
+	table-layout: fixed;
+}
+
+.total, .total td {
+    text-align: center;
+    font-size: 40pt;
+    right: 0;
+    top: 100;
+    width: 100%;
+    border: 3px solid;
+}

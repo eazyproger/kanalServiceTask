@@ -1,0 +1,75 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная</title>
+    <link href="{% static '/css/stylesheet.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <img src="https://kanalservis.ru/wp-content/themes/knal/img/logo.png" class="logo">
+    </header>
+    <div class="graph" float="left" width="50%">
+
+    </div>
+
+
+
+    <div class="table">
+        <table class="total">
+            <tr>
+                <td>Total</td>
+            </tr>
+            <tr>
+                <td>{{total}}</td>
+            </tr>
+        </table>
+        <div>
+            <table class="table_head" width="100%">
+                <col style="width:5%">
+                <col style="width:20%">
+                <col style="width:20%">
+                <col style="width:35%">
+                <col style="width:25%">
+                <thead>
+                    <tr>
+                        <td>№</td>
+                        <td>Заказ №</td>
+                        <td>Стоимость, $</td>
+                        <td>Срок поставки</td>
+                        <td>Стоимость, руб.</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <div class="table_body">
+            <table width="100%">
+                <col style="width:5%">
+                <col style="width:20%">
+                <col style="width:19%">
+                <col style="width:34%">
+                <col style="width:25%">
+                <tbody>
+                    {% for row in orders %}
+                        <tr>
+                            <td>{{ row.id }}</td>
+                            <td>{{ row.order_number }}</td>
+                            <td>{{ row.dollar_price }}</td>
+                            <td>{{ row.delivery_time }}</td>
+                            <td>{{ row.ruble_price }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+
+
+    </div>
+</body>
+</html>
