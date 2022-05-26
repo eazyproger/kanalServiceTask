@@ -3,8 +3,7 @@
     Скрипт копирует таблицу заказов из Google Sheets  в локальную БД Postgres, 
     после чего постоянно обновляет ее.
     Также присутствует реализация Django-сайта, который выводит таблицу заказов.
-    Google Sheet: 
-    https://docs.google.com/spreadsheets/d/1WJMINoH3PLSxZOh7O7vFGeVCKrq-JadilQ00yB2JhOI/edit#gid=0
+    Google Sheet: https://docs.google.com/spreadsheets/d/1WJMINoH3PLSxZOh7O7vFGeVCKrq-JadilQ00yB2JhOI/edit#gid=0
 
 УСТАНОВКА И ЗАПУСК
 
