@@ -4,6 +4,8 @@
     после чего постоянно обновляет ее.
     Также присутствует реализация Django-сайта, который выводит таблицу заказов.
     Google Sheet: https://docs.google.com/spreadsheets/d/1WJMINoH3PLSxZOh7O7vFGeVCKrq-JadilQ00yB2JhOI/edit#gid=0
+    
+    P.S. Не успел выполнить дополнительные пункты ТЗ
 
 УСТАНОВКА И ЗАПУСК
 
