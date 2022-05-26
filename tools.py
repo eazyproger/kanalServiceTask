@@ -25,7 +25,7 @@ def convert_order_from_gs_list_to_tuple(order: list) -> Optional[tuple]:
     """
     Преобразует order из формата ['id', 'order_number', 'dollar_price', 'delivery_time']
                         в формат (id, order_number, dollar_price, 'delivery_time', ruble_price).
-    delivery_time преобразуетсяиз формата 'дд.мм.гггг' в формат 'гггг-мм-дд',
+    delivery_time преобразуется из формата 'дд.мм.гггг' в формат 'гггг-мм-дд',
     добавляется новое поле ruble_price.
     В случае, если данные некорректные, ничего не возращает, сообщение об ошибке записывается в лог
 
@@ -156,6 +156,7 @@ def get_local_db() -> list[tuple]:
     Возращает таблицу заказов из БД, находящейся на машине.
     Данные подключения к БД берутся из config.py
     Формат таблицы - [(id, order_number, dollar_price, 'delivery_time', ruble_price),...]
+    
     """
     cursor = get_db_cursor(DEFAULT_DB_NAME, USER, PASSWORD, HOST)
     cursor.execute("SELECT * FROM orders ORDER BY id;")
