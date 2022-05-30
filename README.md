@@ -2,6 +2,7 @@
 
     Скрипт копирует таблицу заказов из Google Sheets  в локальную БД Postgres, 
     после чего постоянно обновляет ее.
+    Сервис уведомлений notifications ежедневно рассылает уведомление с номерами просроченных заказов.
     Также присутствует реализация Django-сайта, который выводит таблицу заказов.
     Google Sheet: https://docs.google.com/spreadsheets/d/1WJMINoH3PLSxZOh7O7vFGeVCKrq-JadilQ00yB2JhOI/edit#gid=0
     
@@ -30,9 +31,21 @@
       pip install -r ./requirements.txt
 
     Меняем пароль в config.py на пароль администратора
+    или
+    Меняем пароль администратора в базе данных postgres:
+      sudo -u postgres psql postgres
+      \password postgres
 
     Запускаем скрипт:
       python tools.py
+
+  Запуск сервиса уведомлений
+    
+    Для начала необходимо начать чат с ботом @kanalServiceNotifications_bot отправив ему любое сообщение,
+    на которое он вернем вам CHAT_ID
+    Изменить CHAT_ID в config.py на полученный
+    Запустить скрипт:
+      python notifications.py
 
   Запуск Django
     
