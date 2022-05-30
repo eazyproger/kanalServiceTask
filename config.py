@@ -11,6 +11,6 @@ HOST = 'localhost'
 
 # notifications
 TOKEN = '5568286805:AAE_Z0NfwL3QSJgW_o9k9waCrQCs8hXR054'
-CHANNEL_ID = '1513933351'
+CHAT_ID = '1513933351'
 
 LOG_FILE_NAME = 'log.txt'

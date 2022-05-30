@@ -11,12 +11,12 @@ import requests
 from schedule import every, repeat, run_pending
 
 from tools import get_db_cursor
-from config import DEFAULT_DB_NAME, USER, PASSWORD, HOST, CHANNEL_ID, TOKEN
+from config import DEFAULT_DB_NAME, USER, PASSWORD, HOST, CHAT_ID, TOKEN
 
 
 def send_telegram_message(message: str) -> None:
     """
-    Отправляет сообщение в Телеграмм с заданным в config.py CHANNEL_ID
+    Отправляет сообщение в Телеграмм с заданным в config.py CHAT_ID
 
     - *message*: сообщение, которое необходимо отправить
 
@@ -26,7 +26,7 @@ def send_telegram_message(message: str) -> None:
     method = url + "/sendMessage"
 
     r = requests.post(method, data={
-         "chat_id": CHANNEL_ID,
+         "chat_id": CHAT_ID,
          "text": message
           })
 
