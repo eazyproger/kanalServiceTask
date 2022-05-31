@@ -4,7 +4,8 @@
     после чего постоянно обновляет ее.
     Сервис уведомлений notifications ежедневно рассылает уведомление с номерами просроченных заказов.
     Также присутствует реализация Django-сайта, который выводит таблицу заказов.
-    Google Sheet: https://docs.google.com/spreadsheets/d/1WJMINoH3PLSxZOh7O7vFGeVCKrq-JadilQ00yB2JhOI/edit#gid=0
+    Google Sheet: 
+    https://docs.google.com/spreadsheets/d/1WJMINoH3PLSxZOh7O7vFGeVCKrq-JadilQ00yB2JhOI/edit#gid=0
     
 
 УСТАНОВКА И ЗАПУСК
@@ -57,13 +58,14 @@
       Получаем таблицу со всеми заказами:
         SELECT * FROM orders ORDER BY id;
         
-    Примечание: Docker-compose запускает только сам скрипт и БД. Запуск django-сайта и сервиса уведомлений
-    не является проблемой, однако в ТЗ указано не было.
+    Примечание: Docker-compose запускает только сам скрипт и БД. Запуск django-сайта и сервиса 
+    уведомлений не является проблемой, однако в ТЗ указано не было.
 
   Запуск сервиса уведомлений
     
-    Для начала необходимо начать чат с ботом @kanalServiceNotifications_bot отправив ему любое сообщение
-    Далее необходимо перейти по данной ссылке https://api.telegram.org/bot5568286805:AAE_Z0NfwL3QSJgW_o9k9waCrQCs8hXR054/getUpdates,
+    Необходимо начать чат с ботом @kanalServiceNotifications_bot отправив ему любое сообщение
+    Далее необходимо перейти по данной ссылке 
+    https://api.telegram.org/bot5568286805:AAE_Z0NfwL3QSJgW_o9k9waCrQCs8hXR054/getUpdates,
     в котором найти последнюю сущность "chat", содержащую "id" чата
     Изменить CHAT_ID в config.py на полученный "id"
     Запустить скрипт:
