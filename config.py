@@ -7,7 +7,7 @@ RANGE = "Лист1!A2:D"  # диапазон значений
 DEFAULT_DB_NAME = 'google_sheets'
 USER = 'postgres'
 PASSWORD = 'postgres'
-HOST = 'localhost'
+HOST = 'localhost'  # сменить на db при запуске через docker-compose
 
 # notifications
 TOKEN = '5568286805:AAE_Z0NfwL3QSJgW_o9k9waCrQCs8hXR054'
